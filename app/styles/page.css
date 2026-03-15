@@ -655,6 +655,7 @@
   background-size: 357px 274px;
   background-repeat: no-repeat;
   pointer-events: none;
+  z-index: 1;
 }
 
 .competency-mobile-illustration::before {
@@ -698,7 +699,7 @@
   background: linear-gradient(180deg, #4526ac 41.15%, #273274 120.38%);
   filter: blur(150px);
   pointer-events: none;
-  z-index: 1;
+  z-index: 0;
 }
 
 .card-bg-1 { background: #090125; }
