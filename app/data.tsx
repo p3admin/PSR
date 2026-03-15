@@ -31,7 +31,6 @@ export const techLogos = [
   { src: "/Swift_logo 2.png",               w: 84,  h: 34, name: "Swift" },
   { src: "/Kotlin_logo_(2021-present) 2.png", w: 88, h: 34, name: "Kotlin" },
   { src: "/LLM-logo 2.png",                w: 39,  h: 34, name: "LLM" },
-  { src: "/Anthropic_Logo_2.webp",          w: 151, h: 17, name: "Anthropic" },
 ];
 
 // ── Structure icons (order: MC, Studio, JV) ───────────────────────────────────
