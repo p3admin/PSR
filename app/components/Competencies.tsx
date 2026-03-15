@@ -38,6 +38,7 @@ export default function Competencies({ lang }: CompetenciesProps) {
                   <h3 className="competency-mobile-title">{card.title}</h3>
                   <p className="competency-mobile-desc">{card.desc}</p>
                 </div>
+                <div className="competency-mobile-glow" />
                 <div className="competency-mobile-counter">
                   <span className="competency-mobile-counter-current">{String(idx + 1).padStart(2, "0")}</span>
                   <span className="competency-mobile-counter-sep"> —</span>
