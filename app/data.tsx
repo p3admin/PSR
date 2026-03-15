@@ -2,6 +2,7 @@ import React from "react";
 
 // ── Image paths ───────────────────────────────────────────────────────────────
 export const IMG_PSR_LOGO = "/psr-logo.svg";
+export const IMG_PSR_LOGO_ENG = "/psr-logo-eng.svg";
 export const IMG_HERO_BACKGROUND =
   "https://www.figma.com/api/mcp/asset/62ad3cab-12c8-482b-ad27-d3e31d9605c5";
 export const IMG_BILLBOARD = "/billboard.png";

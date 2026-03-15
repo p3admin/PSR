@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { IMG_PSR_LOGO, IMG_VECTOR_PHONE } from "../data";
+import { IMG_PSR_LOGO, IMG_PSR_LOGO_ENG, IMG_VECTOR_PHONE } from "../data";
 import { t, type Lang } from "../translations";
 
 interface FooterProps {
@@ -254,7 +254,7 @@ export default function Footer({ lang }: FooterProps) {
       <div className="footer-bottom">
         <div className="footer-logo-section">
           <a href="https://psr.group/" target="_blank" rel="noopener noreferrer">
-            <img src={IMG_PSR_LOGO} alt="ПСР" className="footer-logo" />
+            <img src={lang === "en" ? IMG_PSR_LOGO_ENG : IMG_PSR_LOGO} alt="ПСР" className="footer-logo" />
           </a>
           <span className="footer-copyright">{tr.copyright}</span>
         </div>
