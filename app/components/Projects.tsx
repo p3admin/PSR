@@ -41,7 +41,7 @@ export default function Projects({ lang, activeTab, onTabChange }: ProjectsProps
     <section id="projects" className="section section-gap projects-section">
       <div>
         <h2 className="section-title animate-up">{tr.projectsTitle}</h2>
-        <p className="projects-subtitle">{tr.projectsSubtitle}</p>
+        <p className="projects-subtitle animate-up">{tr.projectsSubtitle}</p>
       </div>
       <div className="project-tabs animate-up">
         {tr.projectTabs.map(({ key, label }) => (
