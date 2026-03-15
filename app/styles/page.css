@@ -1368,15 +1368,15 @@ a.contact-card-value:hover {
   .hero-bg {
     top: 50%;
     left: 50%;
-    transform: translate(calc(-50% + 5px), calc(-50% + 60px));
+    transform: translate(calc(-50% + 5px), calc(-50% + 70px));
     width: 100%;
     height: 70%;
     object-fit: cover;
   }
-  .hero-gradient-bottom { height: 55%; }
-  .hero-gradient-top    { height: 55%; }
-  .hero-gradient-right  { display: block; width: 30%; }
-  .hero-gradient-left   { display: block; width: 30%; }
+  .hero-gradient-bottom { height: 60%; }
+  .hero-gradient-top    { height: 60%; }
+  .hero-gradient-right  { display: block; width: 35%; }
+  .hero-gradient-left   { display: block; width: 35%; }
   .hero-content         { padding-top: 40px; }
   .hero-title           { font-size: 39px; letter-spacing: -1px; }
   .hero-subtitle        { font-size: 14px; max-width: 360px; margin-top: 24px; }
