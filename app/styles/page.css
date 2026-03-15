@@ -688,20 +688,6 @@
   color: #e0ddfe;
 }
 
-.competency-mobile-glow {
-  position: absolute;
-  bottom: -100px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 522px;
-  height: 392px;
-  border-radius: 522px;
-  background: linear-gradient(180deg, #4526ac 41.15%, #273274 120.38%);
-  filter: blur(150px);
-  pointer-events: none;
-  z-index: 0;
-}
-
 .card-bg-1 { background: #090125; }
 .card-bg-2 { background: #10072f; }
 
