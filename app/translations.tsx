@@ -68,7 +68,7 @@ export const t: Record<Lang, Translations> = {
     missionBody: (
       <>
         Объединяя фундаментальные знания<br className="mobile-br" /> в бизнесе,
-        маркетинге и продукте создавать<br className="mobile-br" /> цифровые решения
+        маркетинге и технологиях создавать<br className="mobile-br" /> цифровые продукты
         для решения возникающих<br className="mobile-br" /> глобальных вызовов.
       </>
     ),
