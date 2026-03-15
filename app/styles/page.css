@@ -1381,7 +1381,7 @@ a.contact-card-value:hover {
   .hero-gradient-top    { height: 50%; }
   .hero-gradient-right  { display: block; width: 25%; }
   .hero-gradient-left   { display: block; width: 25%; }
-  .hero-content         { padding-top: 45px; }
+  .hero-content         { padding-top: 40px; }
   .hero-title           { font-size: 39px; letter-spacing: -1px; }
   .hero-subtitle        { font-size: 14px; max-width: 360px; margin-top: 24px; }
   .hero-btn             { margin-top: 24px; }
