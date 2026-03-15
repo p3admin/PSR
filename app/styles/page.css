@@ -62,7 +62,7 @@
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.15), 0 4px 20px rgba(80, 50, 200, 0.25);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.15);
 }
 
 .nav-item::before {
@@ -323,7 +323,7 @@
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.15), 0 4px 20px rgba(80, 50, 200, 0.25);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.15);
 }
 
 /* Decorative image strip at bottom of hero */
@@ -422,7 +422,7 @@
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.15), 0 4px 20px rgba(80, 50, 200, 0.25);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.15);
   position: relative;
   z-index: 2;
 }
@@ -847,7 +847,7 @@
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.15), 0 4px 20px rgba(80, 50, 200, 0.25);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.15);
 }
 
 .project-tab:hover::before,
