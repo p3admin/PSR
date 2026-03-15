@@ -1546,9 +1546,9 @@ a.contact-card-value:hover {
   }
 
   /* Tech strip */
-  .tech-strip       { height: 60px; }
-  .tech-logo        { height: 22px; }
-  .tech-strip-inner { gap: 32px; }
+  .tech-strip       { height: 48px; }
+  .tech-logo        { height: 16px; }
+  .tech-strip-inner { gap: 24px; }
 
   /* Projects */
   .projects-subtitle { text-align: center; }
