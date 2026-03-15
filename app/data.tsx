@@ -19,54 +19,19 @@ export const IMG_RECTANGLE_STRIP =
 
 // ── Tech logos ────────────────────────────────────────────────────────────────
 export const techLogos = [
-  {
-    src: "/Anthropic_Logo_2.webp",
-    w: 151,
-    h: 17,
-    name: "Anthropic",
-  },
-  {
-    src: "https://www.figma.com/api/mcp/asset/fd6eb185-d6c1-4bc7-a422-cf730dd7b209",
-    w: 128,
-    h: 34,
-    name: "Python",
-  },
-  {
-    src: "https://www.figma.com/api/mcp/asset/fd7ec9d6-91bb-49de-8db8-9c6be0f7618f",
-    w: 84,
-    h: 34,
-    name: "Next.js",
-  },
-  {
-    src: "https://www.figma.com/api/mcp/asset/8d49329a-3602-47bd-b3da-016fb0b8765d",
-    w: 112,
-    h: 34,
-    name: "Docker",
-  },
-  {
-    src: "https://www.figma.com/api/mcp/asset/33736b53-b86c-4d4e-8eed-f27224386b68",
-    w: 88,
-    h: 34,
-    name: "Kotlin",
-  },
-  {
-    src: "https://www.figma.com/api/mcp/asset/20425845-e791-4320-ab80-bc2a76fd439b",
-    w: 159,
-    h: 34,
-    name: "Kubernetes",
-  },
-  {
-    src: "https://www.figma.com/api/mcp/asset/c03cadc5-ff38-4fc8-a25e-5e7bfdb75ca3",
-    w: 108,
-    h: 34,
-    name: "Flutter",
-  },
-  {
-    src: "https://www.figma.com/api/mcp/asset/819ca119-29cf-4b9e-a3bc-a96ccdcc2bc9",
-    w: 39,
-    h: 34,
-    name: "LLM",
-  },
+  { src: "/Python_logo_and_wordmark 2.png", w: 128, h: 34, name: "Python" },
+  { src: "/Typescript 2.png",               w: 35,  h: 34, name: "TypeScript" },
+  { src: "/React_Logo_SVG 2.png",           w: 33,  h: 34, name: "React" },
+  { src: "/Next.js_wordmark 2.png",         w: 84,  h: 34, name: "Next.js" },
+  { src: "/Tailwind_CSS_logo_with_dark_text 2.png", w: 172, h: 34, name: "Tailwind" },
+  { src: "/go-logo-white 2.png",            w: 53,  h: 34, name: "Go" },
+  { src: "/Docker_Logo 2.png",              w: 112, h: 34, name: "Docker" },
+  { src: "/Kubernetes_logo 2.png",          w: 159, h: 34, name: "Kubernetes" },
+  { src: "/Postgresql_elephant 2.png",      w: 31,  h: 34, name: "PostgreSQL" },
+  { src: "/Swift_logo 2.png",               w: 84,  h: 34, name: "Swift" },
+  { src: "/Kotlin_logo_(2021-present) 2.png", w: 88, h: 34, name: "Kotlin" },
+  { src: "/LLM-logo 2.png",                w: 39,  h: 34, name: "LLM" },
+  { src: "/Anthropic_Logo_2.webp",          w: 151, h: 17, name: "Anthropic" },
 ];
 
 // ── Structure icons (order: MC, Studio, JV) ───────────────────────────────────
