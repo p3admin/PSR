@@ -168,8 +168,8 @@ export default function Footer({ lang }: FooterProps) {
               <a href="mailto:business@psr.group" className="contact-card-value">
                 business@psr.group
               </a>
-              <a href="mailto:creative@psr.group" className="contact-card-value">
-                creative@psr.group
+              <a href="mailto:marketing@psr.group" className="contact-card-value">
+                marketing@psr.group
               </a>
               <a href="mailto:technology@psr.group" className="contact-card-value">
                 technology@psr.group
