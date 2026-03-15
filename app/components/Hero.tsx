@@ -16,6 +16,19 @@ export default function Hero({ lang, onScrollToForm }: HeroProps) {
     if (!video) return;
     video.muted = true;
     video.play().catch(() => {});
+
+    const playOnInteraction = () => {
+      if (video.paused) video.play().catch(() => {});
+    };
+    document.addEventListener("touchstart", playOnInteraction, { once: true });
+    document.addEventListener("click", playOnInteraction, { once: true });
+    video.addEventListener("canplay", playOnInteraction, { once: true });
+
+    return () => {
+      document.removeEventListener("touchstart", playOnInteraction);
+      document.removeEventListener("click", playOnInteraction);
+      video.removeEventListener("canplay", playOnInteraction);
+    };
   }, []);
 
   return (
