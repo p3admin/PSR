@@ -28,7 +28,7 @@ export default function Mission({ lang }: MissionProps) {
             className="mission-hole-mobile"
           />
         </div>
-        <div className="mission-approach">
+        <div className="mission-approach animate-up">
           <p className="mission-approach-title">{tr.missionApproachTitle}</p>
           <div className="mission-approach-items">
             {tr.missionApproachItems.map((item, i) => (

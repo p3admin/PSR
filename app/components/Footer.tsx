@@ -251,7 +251,7 @@ export default function Footer({ lang }: FooterProps) {
           </div>
         </div>
       </div>
-      <div className="footer-bottom">
+      <div className="footer-bottom animate-up">
         <div className="footer-logo-section">
           <a href="https://psr.group/" target="_blank" rel="noopener noreferrer">
             <img src={lang === "en" ? IMG_PSR_LOGO_ENG : IMG_PSR_LOGO} alt="ПСР" className="footer-logo" />
