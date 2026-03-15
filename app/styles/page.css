@@ -1551,6 +1551,6 @@ a.contact-card-value:hover {
 
   .success-card {
     width: 357px;
-    align-items: flex-end;
+    align-items: flex-start;
   }
 }
