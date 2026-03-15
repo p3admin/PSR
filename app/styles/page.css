@@ -1359,7 +1359,7 @@ a.contact-card-value:hover {
   .psr-root { padding: 30px 17px 0; overflow-x: visible; }
 
   /* Header */
-  .header { padding: 12px 15px 12px 0; }
+  .header { padding: 7px 15px 12px 0; }
   .nav { display: none; }
   .lang-btn { padding: 8px 12px; }
 
@@ -1381,7 +1381,7 @@ a.contact-card-value:hover {
   .hero-gradient-top    { height: 50%; }
   .hero-gradient-right  { display: block; width: 25%; }
   .hero-gradient-left   { display: block; width: 25%; }
-  .hero-content         { padding-top: 52px; }
+  .hero-content         { padding-top: 47px; }
   .hero-title           { font-size: 39px; letter-spacing: -1px; }
   .hero-subtitle        { font-size: 14px; max-width: 360px; margin-top: 24px; }
   .hero-btn             { margin-top: 24px; }
