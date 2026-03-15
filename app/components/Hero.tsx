@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import { IMG_RECTANGLE_STRIP } from "../data";
 import { t, type Lang } from "../translations";
 
@@ -8,10 +9,19 @@ interface HeroProps {
 
 export default function Hero({ lang, onScrollToForm }: HeroProps) {
   const tr = t[lang];
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+    video.muted = true;
+    video.play().catch(() => {});
+  }, []);
 
   return (
     <section className="hero">
       <video
+        ref={videoRef}
         className="hero-bg"
         src="/video.mp4"
         autoPlay
