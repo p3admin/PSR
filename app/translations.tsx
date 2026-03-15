@@ -24,6 +24,8 @@ interface Translations {
   formName: string;
   formCompany: string;
   formCompanyPlaceholder: string;
+  formEmail: string;
+  formEmailPlaceholder: string;
   formInquiry: string;
   formMessagePlaceholder: string;
   formSubmit: string;
@@ -127,7 +129,9 @@ export const t: Record<Lang, Translations> = {
     formName: "Имя",
     formCompany: "Компания",
     formCompanyPlaceholder: "Название компании",
-    formInquiry: "Запрос",
+    formEmail: "Электронная почта",
+    formEmailPlaceholder: "example@company.ru",
+    formInquiry: "Сообщение",
     formMessagePlaceholder: "Текст сообщения",
     formSubmit: "Отправить сообщение",
     formSubmitting: "Отправка...",
@@ -233,6 +237,8 @@ export const t: Record<Lang, Translations> = {
     formName: "Name",
     formCompany: "Company",
     formCompanyPlaceholder: "Company name",
+    formEmail: "E-mail",
+    formEmailPlaceholder: "example@company.com",
     formInquiry: "Inquiry",
     formMessagePlaceholder: "Message",
     formSubmit: "Send request",

@@ -113,12 +113,12 @@ function ContactForm({ lang }: { lang: Lang }) {
             />
           </div>
           <div className="form-group">
-            <label className="form-label">Email</label>
+            <label className="form-label">{tr.formEmail}</label>
             <input
               className="form-input"
               type="email"
               required
-              placeholder="example@company.com"
+              placeholder={tr.formEmailPlaceholder}
               value={formEmail}
               onChange={(e) => setFormEmail(e.target.value)}
             />
@@ -164,7 +164,7 @@ export default function Footer({ lang }: FooterProps) {
           </div>
           <div className="contact-card">
             <div className="contact-email-list">
-              <span className="contact-card-title">E-mail</span>
+              <span className="contact-card-title">{tr.formEmail}</span>
               <a href="mailto:business@psr.group" className="contact-card-value">
                 business@psr.group
               </a>
