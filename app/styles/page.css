@@ -381,7 +381,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(calc(-50% + 90px), -50%);
+  transform: translate(calc(-50% + 75px), -50%);
   pointer-events: none;
   z-index: 0;
 }
@@ -1411,7 +1411,7 @@ a.contact-card-value:hover {
     display: block;
     height: 720px;
     width: auto;
-    transform: rotate(90deg);
+    transform: translateX(15px) rotate(90deg);
     pointer-events: none;
     flex-shrink: 0;
     -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
