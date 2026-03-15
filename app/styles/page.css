@@ -1373,10 +1373,10 @@ a.contact-card-value:hover {
     height: 70%;
     object-fit: cover;
   }
-  .hero-gradient-bottom { height: 50%; }
-  .hero-gradient-top    { height: 50%; }
-  .hero-gradient-right  { display: block; width: 25%; }
-  .hero-gradient-left   { display: block; width: 25%; }
+  .hero-gradient-bottom { height: 55%; }
+  .hero-gradient-top    { height: 55%; }
+  .hero-gradient-right  { display: block; width: 30%; }
+  .hero-gradient-left   { display: block; width: 30%; }
   .hero-content         { padding-top: 40px; }
   .hero-title           { font-size: 39px; letter-spacing: -1px; }
   .hero-subtitle        { font-size: 14px; max-width: 360px; margin-top: 24px; }
