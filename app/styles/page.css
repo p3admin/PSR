@@ -1545,7 +1545,7 @@ a.contact-card-value:hover {
     bottom: -100px;
     top: auto;
   }
-  .footer-rect-bg { bottom: -200px; }
+  .footer-rect-bg { bottom: 0; }
   .footer-logo-section a { position: relative; top: 60px; }
   .footer-copyright { position: relative; top: 50px; }
 
