@@ -91,8 +91,7 @@
 /* Merged .lang-btn (was split into two separate blocks) */
 .lang-btn {
   display: inline-flex;
-  height: 36px;
-  padding: 10px 17px;
+  padding: 10px 18px;
   justify-content: center;
   align-items: center;
   gap: 10px;
@@ -105,8 +104,7 @@
   background: transparent;
   letter-spacing: 0.14px;
   transition: background 0.2s;
-  min-width: 90px;
-  width: 90px;
+  white-space: nowrap;
 }
 
 .lang-btn:hover, .lang-wrapper:hover .lang-btn {
@@ -131,11 +129,10 @@
   top: calc(100% + 8px);
   right: 0;
   display: none;
-  width: fit-content;
-  min-width: 100px;
+  width: 132px;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-end;
+  align-items: flex-start;
   gap: 8px;
   padding: 12px 16px;
   border-radius: 8px;
@@ -160,14 +157,14 @@
 
 .lang-option {
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 600;
   color: rgba(224, 221, 254, 0.7);
   cursor: pointer;
   background: none;
   border: none;
   padding: 4px 0;
   width: 100%;
-  text-align: right;
+  text-align: left;
   transition: color 0.15s;
 }
 
@@ -1361,7 +1358,6 @@ a.contact-card-value:hover {
   /* Header */
   .header { padding: 5px 15px 12px 0; }
   .nav { display: none; }
-  .lang-btn { padding: 8px 12px; }
 
   /* Hero */
   .hero {
