@@ -1411,7 +1411,7 @@ a.contact-card-value:hover {
     display: block;
     height: 720px;
     width: auto;
-    transform: translateX(15px) rotate(90deg);
+    transform: translateX(10px) rotate(90deg);
     pointer-events: none;
     flex-shrink: 0;
     -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
