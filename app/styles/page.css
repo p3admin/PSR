@@ -618,6 +618,75 @@
 
 .competency-card-mobile { display: none; }
 
+.competency-card-mobile-content {
+  padding: 24px 24px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  z-index: 2;
+}
+
+.competency-mobile-title {
+  color: #e0ddfe;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.28px;
+}
+
+.competency-mobile-desc {
+  color: rgba(224, 221, 254, 0.6);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0.14px;
+  max-width: 308px;
+}
+
+.competency-mobile-illustration {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 357px;
+  height: 274px;
+  background-position: 50%;
+  background-size: 357px 274px;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+
+.competency-mobile-illustration::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 51px;
+  background: linear-gradient(to bottom, #090125 0%, rgba(20, 7, 62, 0.00) 100%);
+}
+
+.competency-mobile-counter {
+  position: absolute;
+  top: 479px;
+  right: 20.5px;
+  width: 91px;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.15;
+  z-index: 2;
+}
+
+.competency-mobile-counter-current {
+  color: #9e9edf;
+}
+
+.competency-mobile-counter-sep,
+.competency-mobile-counter-total {
+  color: #e0ddfe;
+}
+
 .card-bg-1 { background: #090125; }
 .card-bg-2 { background: #10072f; }
 
@@ -1469,10 +1538,10 @@ a.contact-card-value:hover {
   }
   .competency-card-desktop { display: none; }
   .competency-card-mobile {
-    display: block;
+    display: flex;
+    flex-direction: column;
     width: 100%;
     height: 100%;
-    object-fit: cover;
   }
 
   /* Tech strip */

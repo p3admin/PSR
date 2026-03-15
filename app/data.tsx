@@ -74,10 +74,10 @@ export const structureIcons = [IMG_FRAME_MC, IMG_GROUP_STUDIO, IMG_VECTOR_JV];
 
 // ── Competency card images ────────────────────────────────────────────────────
 export const competencyImages = [
-  { desktop: IMG_HERO_BACKGROUND, mobile: "/competences1m.png" },
-  { desktop: "/competences2.png", mobile: "/competences2m.png" },
-  { desktop: "/competences3.png", mobile: "/competences3m.png" },
-  { desktop: "/competences4.png", mobile: "/competences4m.png" },
+  { desktop: IMG_HERO_BACKGROUND, mobile: "/comp1m.png" },
+  { desktop: "/competences2.png", mobile: "/comp2m.png" },
+  { desktop: "/competences3.png", mobile: "/comp3m.png" },
+  { desktop: "/competences4.png", mobile: "/comp4m.png" },
 ];
 
 // ── Projects ──────────────────────────────────────────────────────────────────

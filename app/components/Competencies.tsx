@@ -33,11 +33,21 @@ export default function Competencies({ lang }: CompetenciesProps) {
                 </div>
                 <div className="card-glow" />
               </div>
-              <img
-                src={competencyImages[idx].mobile}
-                alt={card.title}
-                className="competency-card-mobile"
-              />
+              <div className="competency-card-mobile">
+                <div className="competency-card-mobile-content">
+                  <h3 className="competency-mobile-title">{card.title}</h3>
+                  <p className="competency-mobile-desc">{card.desc}</p>
+                </div>
+                <div className="competency-mobile-counter">
+                  <span className="competency-mobile-counter-current">{String(idx + 1).padStart(2, "0")}</span>
+                  <span className="competency-mobile-counter-sep"> —</span>
+                  <span className="competency-mobile-counter-total">{totalLabel}</span>
+                </div>
+                <div
+                  className="competency-mobile-illustration"
+                  style={{ backgroundImage: `url(${competencyImages[idx].mobile})` }}
+                />
+              </div>
             </div>
           ))}
         </div>
