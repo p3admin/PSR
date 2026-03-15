@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { createPortal } from "react-dom";
 import { IMG_PSR_LOGO, IMG_PSR_LOGO_ENG, IMG_VECTOR_PHONE } from "../data";
 import { t, type Lang } from "../translations";
 
@@ -50,7 +51,7 @@ function ContactForm({ lang }: { lang: Lang }) {
 
   return (
     <>
-      {formSuccess && (
+      {formSuccess && createPortal(
         <div className="success-overlay">
           <div className="success-card">
             <svg
@@ -88,7 +89,8 @@ function ContactForm({ lang }: { lang: Lang }) {
               {tr.successClose}
             </button>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
 
       <div id="contact-form" className="form-card animate-up">
