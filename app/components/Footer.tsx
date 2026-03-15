@@ -160,7 +160,7 @@ export default function Footer({ lang }: FooterProps) {
               />
               <span className="contact-card-title">MAX</span>
             </div>
-            <p className="contact-card-value">+ 7 495 555 55 55</p>
+            <a href="tel:+79853669398" className="contact-card-value contact-card-link">+7 985 366 93 98</a>
           </div>
           <div className="contact-card">
             <div className="contact-email-list">
