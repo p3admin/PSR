@@ -1,8 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 
-// TODO: replace with your actual delivery method
-// Options: nodemailer (SMTP), Resend, Telegram bot, CRM webhook, etc.
-const NOTIFY_WEBHOOK_URL = process.env.CONTACT_WEBHOOK_URL ?? "";
+const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN ?? "";
+const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID ?? "";
 
 export async function POST(req: NextRequest) {
   const body = await req.json().catch(() => null);
@@ -18,13 +17,27 @@ export async function POST(req: NextRequest) {
     message: string;
   };
 
-  // If a webhook URL is configured, forward the submission
-  if (NOTIFY_WEBHOOK_URL) {
-    await fetch(NOTIFY_WEBHOOK_URL, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name, company, email, message }),
-    });
+  if (TELEGRAM_BOT_TOKEN && TELEGRAM_CHAT_ID) {
+    const text = [
+      "📩 *Новая заявка с сайта*",
+      `👤 Имя: ${name || "—"}`,
+      `🏢 Компания: ${company || "—"}`,
+      `📧 Email: ${email}`,
+      `💬 Сообщение: ${message || "—"}`,
+    ].join("\n");
+
+    await fetch(
+      `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          chat_id: TELEGRAM_CHAT_ID,
+          text,
+          parse_mode: "Markdown",
+        }),
+      }
+    );
   }
 
   return NextResponse.json({ ok: true });
