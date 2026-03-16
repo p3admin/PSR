@@ -19,7 +19,7 @@ export async function POST(req: NextRequest) {
 
   if (TELEGRAM_BOT_TOKEN && TELEGRAM_CHAT_ID) {
     const text = [
-      "📩 *Новая заявка с сайта*",
+      "📩 Новая заявка с сайта",
       `👤 Имя: ${name || "—"}`,
       `🏢 Компания: ${company || "—"}`,
       `📧 Email: ${email}`,
@@ -34,7 +34,6 @@ export async function POST(req: NextRequest) {
         body: JSON.stringify({
           chat_id: TELEGRAM_CHAT_ID,
           text,
-          parse_mode: "Markdown",
         }),
       }
     );
