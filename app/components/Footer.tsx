@@ -118,8 +118,7 @@ function ContactForm({ lang }: { lang: Lang }) {
             <label className="form-label">{tr.formEmail}</label>
             <input
               className="form-input"
-              type="email"
-              required
+              type="text"
               placeholder={tr.formEmailPlaceholder}
               value={formEmail}
               onChange={(e) => setFormEmail(e.target.value)}
