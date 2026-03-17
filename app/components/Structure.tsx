@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { structureIcons } from "../data";
 import { t, type Lang } from "../translations";
 
@@ -17,10 +18,12 @@ export default function Structure({ lang }: StructureProps) {
             {tr.structureItems.map((item, i) => (
               <div key={item.title} className="structure-item animate-up">
                 <div className="structure-item-header">
-                  <img
+                  <Image
                     className="structure-item-icon"
                     src={structureIcons[i]}
                     alt={item.title}
+                    width={40}
+                    height={40}
                   />
                   <span className="structure-item-title">{item.title}</span>
                 </div>

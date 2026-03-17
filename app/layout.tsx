@@ -15,6 +15,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
+      <head>
+        <link rel="preconnect" href="https://fonts.cdnfonts.com" crossOrigin="" />
+        <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/tt-hoves" />
+      </head>
       <body>
         {children}
         <Script id="yandex-metrika" strategy="afterInteractive">{`

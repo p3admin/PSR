@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { t, type Lang } from "../translations";
 
 interface MissionProps {
@@ -9,11 +10,13 @@ export default function Mission({ lang }: MissionProps) {
 
   return (
     <section id="mission" className="section section-gap mission-section">
-      <img
+      <Image
         src="/missionhole.png"
         alt=""
-        role="presentation"
+        aria-hidden={true}
         className="mission-hole-absolute"
+        width={800}
+        height={800}
       />
       <h2 className="section-title animate-up">{tr.missionTitle}</h2>
       <div className="mission-content">
@@ -21,11 +24,13 @@ export default function Mission({ lang }: MissionProps) {
           <p className="mission-text animate-up">{tr.missionBody}</p>
         </div>
         <div className="mission-hole-mobile-wrap">
-          <img
+          <Image
             src="/missionhole.png"
             alt=""
-            role="presentation"
+            aria-hidden={true}
             className="mission-hole-mobile"
+            width={800}
+            height={800}
           />
         </div>
         <div className="mission-approach animate-up">

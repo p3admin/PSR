@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { IMG_PSR_LOGO, IMG_PSR_LOGO_ENG } from "../data";
 import { t, type Lang } from "../translations";
 
@@ -20,7 +21,7 @@ export default function Header({ lang, onLangChange }: HeaderProps) {
     <header className="header">
       <div className="logo">
         <a href="https://psr.group/" target="_blank" rel="noopener noreferrer">
-          <img src={lang === "en" ? IMG_PSR_LOGO_ENG : IMG_PSR_LOGO} alt="ПСР" />
+          <Image src={lang === "en" ? IMG_PSR_LOGO_ENG : IMG_PSR_LOGO} alt="ПСР" width={88} height={30} priority />
         </a>
       </div>
       <nav className="nav" aria-label="Основная навигация">

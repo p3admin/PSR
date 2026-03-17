@@ -6,14 +6,10 @@ export const IMG_PSR_LOGO_ENG = "/psr-logo-eng.svg";
 export const IMG_HERO_BACKGROUND =
   "https://www.figma.com/api/mcp/asset/62ad3cab-12c8-482b-ad27-d3e31d9605c5";
 export const IMG_BILLBOARD = "/billboard.png";
-export const IMG_FRAME_MC =
-  "https://www.figma.com/api/mcp/asset/3628f8b7-9e3a-4c9a-9e6e-36e298e4cb22";
-export const IMG_GROUP_STUDIO =
-  "https://www.figma.com/api/mcp/asset/3102ebc6-87ee-4e8e-b50f-08516070eba8";
-export const IMG_VECTOR_JV =
-  "https://www.figma.com/api/mcp/asset/8c745a9b-4ed5-4fca-97f5-fd92174338d0";
-export const IMG_VECTOR_PHONE =
-  "https://www.figma.com/api/mcp/asset/48276092-9f68-4304-bc0b-db4e3a9bbb76";
+export const IMG_FRAME_MC = "/frame2087327238.svg";
+export const IMG_GROUP_STUDIO = "/group.svg";
+export const IMG_VECTOR_JV = "/vector.svg";
+export const IMG_VECTOR_PHONE = "/vector11.svg";
 export const IMG_RECTANGLE_STRIP =
   "https://www.figma.com/api/mcp/asset/b879437c-ba83-472c-9586-5ee39abdd587";
 

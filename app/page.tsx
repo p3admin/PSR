@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import "./styles/page.css";
 import type { TabKey } from "./data";
 import type { Lang } from "./translations";
@@ -65,11 +66,14 @@ export default function PSRLanding() {
         <Projects lang={lang} activeTab={activeTab} onTabChange={setActiveTab} />
         <Footer lang={lang} />
       </div>
-      <img
+      <Image
         src="/rectangle.png"
         alt=""
-        role="presentation"
+        aria-hidden={true}
         className="footer-rect-bg"
+        width={1440}
+        height={400}
+        style={{ width: "100%", height: "auto" }}
       />
     </div>
   );

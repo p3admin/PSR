@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { projects, type TabKey } from "../data";
 import { t, type Lang } from "../translations";
 
@@ -59,13 +60,16 @@ export default function Projects({ lang, activeTab, onTabChange }: ProjectsProps
           key={`${activeTab}-${projectIndex}`}
           className="projects-content animate-on-mount"
         >
-          <div className="project-image">
-            <img
+          <div className="project-image" style={{ position: "relative" }}>
+            <Image
               src={currentImages[imageIndex]}
               alt={currentProject.name[lang]}
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              style={{ objectFit: "cover" }}
             />
             {currentImages.length > 1 && (
-              <div className="project-nav-btns">
+              <div className="project-nav-btns" style={{ position: "relative", zIndex: 1 }}>
                 <button
                   className="project-nav-btn"
                   onClick={handlePrev}

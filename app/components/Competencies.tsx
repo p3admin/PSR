@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { competencyImages, techLogos } from "../data";
 import { t, type Lang } from "../translations";
 
@@ -25,7 +26,7 @@ export default function Competencies({ lang }: CompetenciesProps) {
                   <p className="competency-desc">{card.desc}</p>
                 </div>
                 <div className="card-image-container">
-                  <img src={competencyImages[idx].desktop} alt={card.title} />
+                  <Image src={competencyImages[idx].desktop} alt={card.title} fill sizes="(max-width: 1024px) 100vw, 50vw" style={{ objectFit: "cover" }} />
                   <div className="card-image-gradient" />
                 </div>
                 <div className="competency-counter">
@@ -43,10 +44,9 @@ export default function Competencies({ lang }: CompetenciesProps) {
                   <span className="competency-mobile-counter-sep"> —</span>
                   <span className="competency-mobile-counter-total">{totalLabel}</span>
                 </div>
-                <div
-                  className="competency-mobile-illustration"
-                  style={{ backgroundImage: `url(${competencyImages[idx].mobile})` }}
-                />
+                <div className="competency-mobile-illustration">
+                  <Image src={competencyImages[idx].mobile} alt="" aria-hidden={true} width={357} height={274} style={{ objectFit: "cover", width: "100%", height: "100%" }} />
+                </div>
               </div>
             </div>
           ))}
@@ -58,12 +58,13 @@ export default function Competencies({ lang }: CompetenciesProps) {
         <div className="tech-strip-fade-left" />
         <div className="tech-strip-inner">
           {[...techLogos, ...techLogos, ...techLogos].map((logo, i) => (
-            <img
+            <Image
               key={`${logo.name}-${i}`}
               className="tech-logo"
               src={logo.src}
               alt={logo.name}
-              style={{ width: logo.w, height: logo.h }}
+              width={logo.w}
+              height={logo.h}
             />
           ))}
         </div>

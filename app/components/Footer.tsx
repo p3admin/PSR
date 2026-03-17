@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { createPortal } from "react-dom";
+import Image from "next/image";
 import { IMG_PSR_LOGO, IMG_PSR_LOGO_ENG, IMG_VECTOR_PHONE } from "../data";
 import { t, type Lang } from "../translations";
 
@@ -154,10 +155,12 @@ export default function Footer({ lang }: FooterProps) {
         <div className="contact-column animate-up">
           <div className="contact-card">
             <div className="contact-card-header">
-              <img
+              <Image
                 className="contact-card-icon"
                 src={IMG_VECTOR_PHONE}
                 alt="Телефон"
+                width={24}
+                height={24}
               />
               <span className="contact-card-title">MAX</span>
             </div>
@@ -240,7 +243,7 @@ export default function Footer({ lang }: FooterProps) {
                   <a href="/agreement">{tr.linkOffer}</a>
                   <a href="/privacy_policy">{tr.linkPrivacy}</a>
                 </div>
-                <img
+                <Image
                   src="/md.png"
                   alt="МИР badge"
                   width={145}
@@ -255,7 +258,7 @@ export default function Footer({ lang }: FooterProps) {
       <div className="footer-bottom animate-up">
         <div className="footer-logo-section">
           <a href="https://psr.group/" target="_blank" rel="noopener noreferrer">
-            <img src={lang === "en" ? IMG_PSR_LOGO_ENG : IMG_PSR_LOGO} alt="ПСР" className="footer-logo" />
+            <Image src={lang === "en" ? IMG_PSR_LOGO_ENG : IMG_PSR_LOGO} alt="ПСР" className="footer-logo" width={88} height={30} />
           </a>
           <span className="footer-copyright">{tr.copyright}</span>
         </div>

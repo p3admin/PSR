@@ -1,9 +1,10 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 
-const imgPsr1 = "https://www.figma.com/api/mcp/asset/dfd14824-d9a1-4756-9728-0b81d821583d";
+const imgPsr1 = "/psr-logo.svg";
 const imgEllipse8538 = "https://www.figma.com/api/mcp/asset/38f9d19f-9683-487d-984b-ce94ae638b75";
 const imgEllipse8537 = "https://www.figma.com/api/mcp/asset/5f465a81-f3ca-44cc-8864-33bdd99290d1";
 
@@ -22,19 +23,21 @@ export default function LoginPage() {
     <div className="bg-black min-h-screen w-full flex items-center justify-center overflow-hidden relative">
       {/* Decorative glows */}
       <div className="absolute top-[-100px] right-[-100px] w-[600px] h-[700px] opacity-30 pointer-events-none">
-        <img src={imgEllipse8538} alt="" className="w-full h-full object-contain" />
+        <Image src={imgEllipse8538} alt="" aria-hidden={true} width={600} height={700} style={{ width: "100%", height: "100%", objectFit: "contain" }} />
       </div>
       <div className="absolute bottom-[-100px] left-[-100px] w-[400px] h-[600px] opacity-20 pointer-events-none">
-        <img src={imgEllipse8537} alt="" className="w-full h-full object-contain" />
+        <Image src={imgEllipse8537} alt="" aria-hidden={true} width={400} height={600} style={{ width: "100%", height: "100%", objectFit: "contain" }} />
       </div>
 
       <div className="relative z-10 w-full max-w-[490px] px-4 flex flex-col items-center gap-[48px]">
         {/* Logo */}
         <Link href="/" className="flex h-[30px] items-center">
-          <img
+          <Image
             alt="PSR"
             src={imgPsr1}
-            className="h-[24px] w-auto block"
+            width={88}
+            height={24}
+            style={{ width: "auto", height: "24px", display: "block" }}
           />
         </Link>
 
