@@ -42,7 +42,7 @@ export default function Hero({ lang, onScrollToForm }: HeroProps) {
         muted
         loop
         playsInline
-        preload="auto"
+        preload="none"
         aria-hidden="true"
       />
       {/* Single gradient bottom (duplicate removed) */}

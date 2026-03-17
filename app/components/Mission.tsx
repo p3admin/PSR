@@ -17,6 +17,7 @@ export default function Mission({ lang }: MissionProps) {
         className="mission-hole-absolute"
         width={800}
         height={800}
+        sizes="(max-width: 768px) 0px, 50vw"
       />
       <h2 className="section-title animate-up">{tr.missionTitle}</h2>
       <div className="mission-content">
@@ -31,6 +32,7 @@ export default function Mission({ lang }: MissionProps) {
             className="mission-hole-mobile"
             width={800}
             height={800}
+            sizes="(max-width: 768px) 80vw, 0px"
           />
         </div>
         <div className="mission-approach animate-up">

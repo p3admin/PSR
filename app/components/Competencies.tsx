@@ -45,7 +45,7 @@ export default function Competencies({ lang }: CompetenciesProps) {
                   <span className="competency-mobile-counter-total">{totalLabel}</span>
                 </div>
                 <div className="competency-mobile-illustration">
-                  <Image src={competencyImages[idx].mobile} alt="" aria-hidden={true} width={357} height={274} style={{ objectFit: "cover", width: "100%", height: "100%" }} />
+                  <Image src={competencyImages[idx].mobile} alt="" aria-hidden={true} width={357} height={274} sizes="357px" style={{ objectFit: "cover", width: "100%", height: "100%" }} />
                 </div>
               </div>
             </div>
