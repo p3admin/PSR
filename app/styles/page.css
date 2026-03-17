@@ -1544,7 +1544,7 @@ a.contact-card-value:hover {
 
   /* Tech strip */
   .tech-strip       { height: 48px; }
-  .tech-logo        { height: 16px; }
+  .tech-logo        { height: 26px !important; width: auto !important; }
   .tech-strip-inner { gap: 24px; }
 
   /* Projects */
