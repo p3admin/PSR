@@ -58,13 +58,12 @@ export default function Competencies({ lang }: CompetenciesProps) {
         <div className="tech-strip-fade-left" />
         <div className="tech-strip-inner">
           {[...techLogos, ...techLogos, ...techLogos].map((logo, i) => (
-            <Image
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
               key={`${logo.name}-${i}`}
               className="tech-logo"
               src={logo.src}
               alt={logo.name}
-              width={logo.w}
-              height={logo.h}
               style={{ width: logo.w, height: logo.h }}
             />
           ))}
