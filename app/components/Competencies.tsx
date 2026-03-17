@@ -65,6 +65,7 @@ export default function Competencies({ lang }: CompetenciesProps) {
               alt={logo.name}
               width={logo.w}
               height={logo.h}
+              style={{ width: logo.w, height: logo.h }}
             />
           ))}
         </div>
