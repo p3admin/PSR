@@ -15,18 +15,18 @@ export const IMG_RECTANGLE_STRIP =
 
 // ── Tech logos ────────────────────────────────────────────────────────────────
 export const techLogos = [
-  { src: "/Python_logo_and_wordmark 2.png", w: 128, h: 34, name: "Python" },
-  { src: "/Typescript 2.png",               w: 35,  h: 34, name: "TypeScript" },
-  { src: "/React_Logo_SVG 2.png",           w: 33,  h: 34, name: "React" },
-  { src: "/Next.js_wordmark 2.png",         w: 84,  h: 34, name: "Next.js" },
-  { src: "/Tailwind_CSS_logo_with_dark_text 2.png", w: 172, h: 34, name: "Tailwind" },
-  { src: "/go-logo-white 2.png",            w: 53,  h: 34, name: "Go" },
-  { src: "/Docker_Logo 2.png",              w: 112, h: 34, name: "Docker" },
-  { src: "/Kubernetes_logo 2.png",          w: 159, h: 34, name: "Kubernetes" },
-  { src: "/Postgresql_elephant 2.png",      w: 31,  h: 34, name: "PostgreSQL" },
-  { src: "/Swift_logo 2.png",               w: 84,  h: 34, name: "Swift" },
-  { src: "/Kotlin_logo_(2021-present) 2.png", w: 88, h: 34, name: "Kotlin" },
-  { src: "/LLM-logo 2.png",                w: 39,  h: 34, name: "LLM" },
+  { src: "/Python_logo_and_wordmark 2.png", w: 96,  h: 26, name: "Python" },
+  { src: "/Typescript 2.png",               w: 26,  h: 26, name: "TypeScript" },
+  { src: "/React_Logo_SVG 2.png",           w: 25,  h: 26, name: "React" },
+  { src: "/Next.js_wordmark 2.png",         w: 63,  h: 26, name: "Next.js" },
+  { src: "/Tailwind_CSS_logo_with_dark_text 2.png", w: 129, h: 26, name: "Tailwind" },
+  { src: "/go-logo-white 2.png",            w: 40,  h: 26, name: "Go" },
+  { src: "/Docker_Logo 2.png",              w: 84,  h: 26, name: "Docker" },
+  { src: "/Kubernetes_logo 2.png",          w: 119, h: 26, name: "Kubernetes" },
+  { src: "/Postgresql_elephant 2.png",      w: 23,  h: 26, name: "PostgreSQL" },
+  { src: "/Swift_logo 2.png",               w: 63,  h: 26, name: "Swift" },
+  { src: "/Kotlin_logo_(2021-present) 2.png", w: 66, h: 26, name: "Kotlin" },
+  { src: "/LLM-logo 2.png",                w: 29,  h: 26, name: "LLM" },
 ];
 
 // ── Structure icons (order: MC, Studio, JV) ───────────────────────────────────
