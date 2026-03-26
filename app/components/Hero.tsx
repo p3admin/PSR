@@ -1,6 +1,4 @@
 import { useEffect, useRef } from "react";
-import Image from "next/image";
-import { IMG_RECTANGLE_STRIP } from "../data";
 import { t, type Lang } from "../translations";
 
 interface HeroProps {
@@ -58,9 +56,6 @@ export default function Hero({ lang, onScrollToForm }: HeroProps) {
             {tr.heroCta}
           </button>
         </div>
-      </div>
-      <div className="hero-strip animate-up">
-        <Image src={IMG_RECTANGLE_STRIP} alt="" aria-hidden={true} width={1440} height={40} style={{ width: "100%", height: "auto" }} priority />
       </div>
     </section>
   );
