@@ -1261,7 +1261,8 @@
 .form-error {
   font-size: 13px;
   color: #ff6b6b;
-  margin-bottom: 8px;
+  margin-top: calc(-32px + 4px);
+  margin-bottom: calc(12px - 32px);
 }
 
 .btn-primary:disabled {
