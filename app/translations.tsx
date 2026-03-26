@@ -143,7 +143,7 @@ export const t: Record<Lang, Translations> = {
     successClose: "Закрыть",
     legalTitle: "Правовая информация",
     legalText:
-      "Минимальный порог входа в проект — от 2 168 000 рублей. Это стоимость месячного цикла работы над цифровым продуктом.",
+      "Стоимость проектов начинается от 2 362 500 рублей и определяется индивидуально в зависимости от задач, состава команды и сроков. Указанная стоимость является ориентировочной и не является публичной офертой.",
     companyMC: {
       name: 'Управляющая компания ООО "УК ПСР"',
       inn: "7736362669",
@@ -251,7 +251,7 @@ export const t: Record<Lang, Translations> = {
     successClose: "Close",
     legalTitle: "Legal information",
     legalText:
-      "The minimum investment threshold for the project is 2,168,000 rubles. This is the cost of a monthly cycle of work on a digital product.",
+      "Project costs start from 2,362,500 rubles and are determined individually based on tasks, team composition, and timelines. The stated cost is approximate and does not constitute a public offer.",
     companyMC: {
       name: 'LLC "MC SDB"',
       inn: "7736362669",
