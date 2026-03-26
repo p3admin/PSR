@@ -37,8 +37,8 @@ interface Translations {
   successClose: string;
   legalTitle: string;
   legalText: string;
-  companyMC: { name: string; inn: string; address: string };
-  companySDB: { name: string; inn: string; address: string };
+  companyMC: { name: string; ogrn: string; inn: string; address: string };
+  companySDB: { name: string; ogrn: string; inn: string; address: string };
   linkOffer: string;
   linkPrivacy: string;
   copyright: string;
@@ -146,11 +146,13 @@ export const t: Record<Lang, Translations> = {
       "Стоимость проектов начинается от 2 362 500 рублей и определяется индивидуально в зависимости от задач, состава команды и сроков. Указанная стоимость является ориентировочной и не является публичной офертой.",
     companyMC: {
       name: 'Управляющая компания ООО "УК ПСР"',
+      ogrn: "1247700497010",
       inn: "7736362669",
       address: "123557, город Москва, Электрический пер, д. 3/10 стр. 1, помещ. 3/5",
     },
     companySDB: {
       name: 'Разработчик цифровых продуктов ООО "ПСР"',
+      ogrn: "1187746909272",
       inn: "7704463921",
       address: "123112, город Москва, Пресненская наб, д. 8 стр. 1, помещ. 492с",
     },
@@ -254,11 +256,13 @@ export const t: Record<Lang, Translations> = {
       "Project costs start from 2,362,500 rubles and are determined individually based on tasks, team composition, and timelines. The stated cost is approximate and does not constitute a public offer.",
     companyMC: {
       name: 'LLC "MC SDB"',
+      ogrn: "1247700497010",
       inn: "7736362669",
       address: "123557, Moscow, Elektrichesky Lane, 3/10, bldg. 1, apt. 3/5",
     },
     companySDB: {
       name: 'LLC "SDB"',
+      ogrn: "1187746909272",
       inn: "7704463921",
       address: "123112, Moscow, Presnenskaya Embankment, 8, bldg. 1, apt. 492c",
     },

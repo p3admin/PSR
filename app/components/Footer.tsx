@@ -229,13 +229,15 @@ export default function Footer({ lang }: FooterProps) {
                 <div className="legal-divider" />
                 <div className="legal-company-info">
                   <span>{tr.companyMC.name}</span>
-                  <span>{tr.companyMC.inn}</span>
+                  <span>ОГРН {tr.companyMC.ogrn}</span>
+                  <span>ИНН {tr.companyMC.inn}</span>
                   <span>{tr.companyMC.address}</span>
                 </div>
                 <div className="legal-divider" />
                 <div className="legal-company-info">
                   <span>{tr.companySDB.name}</span>
-                  <span>{tr.companySDB.inn}</span>
+                  <span>ОГРН {tr.companySDB.ogrn}</span>
+                  <span>ИНН {tr.companySDB.inn}</span>
                   <span>{tr.companySDB.address}</span>
                 </div>
                 <div className="legal-divider" />
