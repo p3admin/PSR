@@ -34,6 +34,7 @@ interface Translations {
   formErrorServer: string;
   formErrorConsent: string;
   formConsent: string;
+  formConsentLink: string;
   successTitle: string;
   successDesc: string;
   successClose: string;
@@ -140,7 +141,8 @@ export const t: Record<Lang, Translations> = {
     formErrorEmail: "Укажите email",
     formErrorServer: "Ошибка отправки. Попробуйте ещё раз.",
     formErrorConsent: "Необходимо согласие на обработку персональных данных",
-    formConsent: "Я согласен на обработку персональных данных",
+    formConsent: "Я согласен на",
+    formConsentLink: "обработку персональных данных",
     successTitle: "Запрос успешно отправлен",
     successDesc:
       "Мы получили ваш запрос и уже передали его команде. Свяжемся с вами в ближайшее время, чтобы обсудить детали проекта.",
@@ -252,7 +254,8 @@ export const t: Record<Lang, Translations> = {
     formErrorEmail: "Email is required",
     formErrorServer: "Failed to send. Please try again.",
     formErrorConsent: "You must agree to the personal data processing policy",
-    formConsent: "I agree to the processing of personal data",
+    formConsent: "I agree to the",
+    formConsentLink: "processing of personal data",
     successTitle: "Request sent successfully",
     successDesc:
       "We have received your request and passed it to our team. We will get in touch with you shortly to discuss the project details.",

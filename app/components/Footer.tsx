@@ -149,7 +149,7 @@ function ContactForm({ lang }: { lang: Lang }) {
           <span>
             {tr.formConsent}{" "}
             <a href="/privacy_policy" target="_blank" rel="noopener noreferrer">
-              {tr.linkPrivacy}
+              {tr.formConsentLink}
             </a>
           </span>
         </label>
