@@ -263,13 +263,16 @@ export default function Footer({ lang }: FooterProps) {
                   <a href="/agreement">{tr.linkOffer}</a>
                   <a href="/privacy_policy">{tr.linkPrivacy}</a>
                 </div>
-                <Image
-                  src="/md.png"
-                  alt="МИР badge"
-                  width={145}
-                  height={31}
-                  className="legal-md-badge"
-                />
+                <div className="legal-md-wrapper">
+                  <span className="legal-md-accreditation">АО-20260220-36999953627-3 от 17.03.2026</span>
+                  <Image
+                    src="/md.png"
+                    alt="МИР badge"
+                    width={145}
+                    height={31}
+                    className="legal-md-badge"
+                  />
+                </div>
               </div>
             </div>
           </div>

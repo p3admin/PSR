@@ -1418,8 +1418,22 @@ a.contact-card-value:hover {
   text-decoration: underline;
 }
 
-.legal-md-badge {
+.legal-md-wrapper {
   margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.legal-md-accreditation {
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(224, 221, 254, 0.6);
+  letter-spacing: 0.12px;
+}
+
+.legal-md-badge {
+  display: block;
 }
 
 /* ─── Footer bottom ────────────────────────────────────────────────────────── */
