@@ -117,7 +117,15 @@ export default function Projects({ lang, activeTab, onTabChange }: ProjectsProps
           <div className="project-info">
             <div className="project-info-top">
               <div>
-                <h3 className="project-name">{currentProject.name[lang]}</h3>
+                <h3 className="project-name">
+                  {currentProject.url ? (
+                    <a href={currentProject.url} target="_blank" rel="noopener noreferrer" className="project-name-link">
+                      {currentProject.name[lang]}
+                    </a>
+                  ) : (
+                    currentProject.name[lang]
+                  )}
+                </h3>
                 <p className="project-category">{currentProject.category[lang]}</p>
               </div>
               <p className="project-description">

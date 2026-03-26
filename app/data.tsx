@@ -47,6 +47,7 @@ export interface ProjectData {
   id: string;
   tabKey: "client" | "internal";
   name: { ru: string; en: string };
+  url?: string;
   category: { ru: string; en: string };
   images: string[];
   description: { ru: React.ReactNode; en: React.ReactNode };
@@ -57,6 +58,7 @@ export const projects: ProjectData[] = [
     id: "pdd",
     tabKey: "internal",
     name: { ru: "пдд.рф", en: "пдд.рф" },
+    url: "https://пдд.рф",
     category: {
       ru: "ИИ / Образовательные и автомобильные технологии",
       en: "AI / Educational and Automotive Technologies",
