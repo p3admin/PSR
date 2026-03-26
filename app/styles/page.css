@@ -1216,8 +1216,8 @@
   align-items: flex-start;
   gap: 10px;
   cursor: pointer;
-  margin-top: calc(12px - 32px);
-  margin-bottom: calc(12px - 32px);
+  margin-top: calc(24px - 32px);
+  margin-bottom: calc(24px - 32px);
 }
 
 .form-consent input[type="checkbox"] {
