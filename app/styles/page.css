@@ -1216,7 +1216,8 @@
   align-items: flex-start;
   gap: 10px;
   cursor: pointer;
-  margin-bottom: 8px;
+  margin-top: 24px;
+  margin-bottom: 24px;
 }
 
 .form-consent input[type="checkbox"] {
@@ -1235,13 +1236,16 @@
 }
 
 .form-consent a {
-  color: rgba(255, 255, 255, 0.85);
+  color: inherit;
   text-decoration: underline;
   text-underline-offset: 2px;
+  text-decoration-color: rgba(255, 255, 255, 0.4);
+  transition: color 0.2s;
 }
 
 .form-consent a:hover {
-  color: #fff;
+  color: #6b5be2;
+  text-decoration-color: #6b5be2;
 }
 
 .form-error {
