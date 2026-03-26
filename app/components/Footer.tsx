@@ -18,10 +18,15 @@ function ContactForm({ lang }: { lang: Lang }) {
   const [formMessage, setFormMessage] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const [consent, setConsent] = useState(false);
 
   const handleSubmit = async () => {
     if (!formEmail) {
       setError(tr.formErrorEmail);
+      return;
+    }
+    if (!consent) {
+      setError(tr.formErrorConsent);
       return;
     }
     setError("");
@@ -135,6 +140,19 @@ function ContactForm({ lang }: { lang: Lang }) {
             />
           </div>
         </div>
+        <label className="form-consent">
+          <input
+            type="checkbox"
+            checked={consent}
+            onChange={(e) => setConsent(e.target.checked)}
+          />
+          <span>
+            {tr.formConsent}{" "}
+            <a href="/privacy_policy" target="_blank" rel="noopener noreferrer">
+              {tr.linkPrivacy}
+            </a>
+          </span>
+        </label>
         {error && <p className="form-error">{error}</p>}
         <button className="btn-primary" onClick={handleSubmit} disabled={loading}>
           {loading ? tr.formSubmitting : tr.formSubmit}
