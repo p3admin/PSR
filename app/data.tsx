@@ -3,8 +3,6 @@ import React from "react";
 // ── Image paths ───────────────────────────────────────────────────────────────
 export const IMG_PSR_LOGO = "/psr-logo.svg";
 export const IMG_PSR_LOGO_ENG = "/psr-logo-eng.svg";
-export const IMG_HERO_BACKGROUND =
-  "https://www.figma.com/api/mcp/asset/62ad3cab-12c8-482b-ad27-d3e31d9605c5";
 export const IMG_BILLBOARD = "/billboard.png";
 export const IMG_FRAME_MC = "/frame2087327238.svg";
 export const IMG_GROUP_STUDIO = "/group.svg";
@@ -34,7 +32,7 @@ export const structureIcons = [IMG_FRAME_MC, IMG_GROUP_STUDIO, IMG_VECTOR_JV];
 
 // ── Competency card images ────────────────────────────────────────────────────
 export const competencyImages = [
-  { desktop: IMG_HERO_BACKGROUND, mobile: "/comp1m.png" },
+  { desktop: "/competences1.png", mobile: "/comp1m.png" },
   { desktop: "/competences2.png", mobile: "/comp2m.png" },
   { desktop: "/competences3.png", mobile: "/comp3m.png" },
   { desktop: "/competences4.png", mobile: "/comp4m.png" },
