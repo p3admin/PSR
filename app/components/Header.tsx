@@ -47,63 +47,73 @@ export default function Header({ lang, onLangChange }: HeaderProps) {
   }, [menuItems]);
 
   return (
-    <div className={styles.headerBar}>
-      <header className={styles.header}>
-        <div className={styles.logo}>
-          <a href="https://psr.group/" target="_blank" rel="noopener noreferrer">
-            <Image src={lang === "en" ? IMG_PSR_LOGO_ENG : IMG_PSR_LOGO} alt="ПСР" width={88} height={30} priority />
-          </a>
-        </div>
+    <>
+      <div className={styles.headerBar}>
+        <header className={styles.header}>
+          <div className={styles.logo}>
+            <a href="https://psr.group/" target="_blank" rel="noopener noreferrer">
+              <Image src={lang === "en" ? IMG_PSR_LOGO_ENG : IMG_PSR_LOGO} alt="ПСР" width={88} height={30} priority />
+            </a>
+          </div>
 
-        {/* Desktop nav */}
-        <nav className={styles.nav} aria-label="Основная навигация">
-          {menuItems.map(({ label, sectionId }) => (
-            <button
-              key={sectionId}
-              className={`${styles.navItem}${activeSection === sectionId ? " " + styles.navItemActive : ""}`}
-              aria-label={`Перейти к разделу ${label}`}
-              onClick={() => handleScrollTo(sectionId)}
-            >
-              {label}
-            </button>
-          ))}
-        </nav>
-
-        {/* Desktop lang picker */}
-        <div className={styles.langWrapper}>
-          <button className={styles.langBtn} aria-label="Выбрать язык">
-            {langLabel[lang]}
-            <span className={styles.langArrow} aria-hidden="true" />
-          </button>
-          <div className={styles.langDropdown}>
-            {languages.map((l) => (
+          {/* Desktop nav */}
+          <nav className={styles.nav} aria-label="Основная навигация">
+            {menuItems.map(({ label, sectionId }) => (
               <button
-                key={l}
-                className={`${styles.langOption}${lang === l ? " " + styles.active : ""}`}
-                onClick={() => onLangChange(l)}
+                key={sectionId}
+                className={`${styles.navItem}${activeSection === sectionId ? " " + styles.navItemActive : ""}`}
+                aria-label={`Перейти к разделу ${label}`}
+                onClick={() => handleScrollTo(sectionId)}
               >
-                {langLabel[l]}
+                {label}
               </button>
             ))}
+          </nav>
+
+          {/* Desktop lang picker */}
+          <div className={styles.langWrapper}>
+            <button className={styles.langBtn} aria-label="Выбрать язык">
+              {langLabel[lang]}
+              <span className={styles.langArrow} aria-hidden="true" />
+            </button>
+            <div className={styles.langDropdown}>
+              {languages.map((l) => (
+                <button
+                  key={l}
+                  className={`${styles.langOption}${lang === l ? " " + styles.active : ""}`}
+                  onClick={() => onLangChange(l)}
+                >
+                  {langLabel[l]}
+                </button>
+              ))}
+            </div>
           </div>
-        </div>
 
-        {/* Mobile burger */}
-        <button
-          className={styles.burger}
-          aria-label="Открыть меню"
-          aria-expanded={menuOpen}
-          onClick={() => setMenuOpen((o) => !o)}
-        >
-          <span className={`${styles.burgerLine}${menuOpen ? " " + styles.burgerLineTop : ""}`} />
-          <span className={`${styles.burgerLine}${menuOpen ? " " + styles.burgerLineMid : ""}`} />
-          <span className={`${styles.burgerLine}${menuOpen ? " " + styles.burgerLineBot : ""}`} />
-        </button>
-      </header>
+          {/* Mobile burger */}
+          <button
+            className={styles.burger}
+            aria-label="Открыть меню"
+            aria-expanded={menuOpen}
+            onClick={() => setMenuOpen((o) => !o)}
+          >
+            <span className={`${styles.burgerLine}${menuOpen ? " " + styles.burgerLineTop : ""}`} />
+            <span className={`${styles.burgerLine}${menuOpen ? " " + styles.burgerLineMid : ""}`} />
+            <span className={`${styles.burgerLine}${menuOpen ? " " + styles.burgerLineBot : ""}`} />
+          </button>
+        </header>
+      </div>
 
-      {/* Mobile dropdown */}
+      {/* Mobile fullscreen menu — outside headerBar to escape backdrop-filter containing block */}
       {menuOpen && (
         <div className={styles.mobileMenu}>
+          <button
+            className={styles.mobileClose}
+            aria-label="Закрыть меню"
+            onClick={() => setMenuOpen(false)}
+          >
+            <span className={`${styles.burgerLine} ${styles.burgerLineTop}`} />
+            <span className={`${styles.burgerLine} ${styles.burgerLineBot}`} />
+          </button>
           <nav className={styles.mobileNav}>
             {menuItems.map(({ label, sectionId }) => (
               <button
@@ -128,6 +138,6 @@ export default function Header({ lang, onLangChange }: HeaderProps) {
           </div>
         </div>
       )}
-    </div>
+    </>
   );
 }
