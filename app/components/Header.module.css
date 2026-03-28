@@ -1,3 +1,17 @@
+.headerBar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  align-self: stretch;
+  display: flex;
+  justify-content: center;
+  padding: 0 20px;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 0.5px solid rgba(224, 221, 254, 0.08);
+}
+
 .header {
   display: flex;
   align-items: center;
@@ -36,6 +50,7 @@
   transition: background 0.25s, backdrop-filter 0.25s, box-shadow 0.25s;
 }
 
+.navItemActive,
 .navItem:hover {
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(12px);
@@ -58,7 +73,8 @@
   transition: opacity 0.25s;
 }
 
-.navItem:hover::before { opacity: 1; }
+.navItem:hover::before,
+.navItemActive::before { opacity: 1; }
 
 .langWrapper {
   position: relative;

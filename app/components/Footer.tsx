@@ -23,7 +23,7 @@ export default function Footer({ lang }: FooterProps) {
               <Image className={styles.contactCardIcon} src={IMG_VECTOR_PHONE} alt="Телефон" width={24} height={24} />
               <span className={styles.contactCardTitle}>MAX</span>
             </div>
-            <a href="tel:+79853669398" className={styles.contactCardValue}>+7 985 366 93 98</a>
+            <a href="tel:+79165918435" className={styles.contactCardValue}>+7 916 591 84 35</a>
           </div>
           <div className={styles.contactCard}>
             <div className={styles.contactEmailList}>

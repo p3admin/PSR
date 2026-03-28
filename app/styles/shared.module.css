@@ -11,7 +11,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px 20px 0;
+  padding: 0 20px 0;
 }
 
 /* ─── Footer background image (outside psrRoot, inside pageWrapper) ──────── */
@@ -102,7 +102,7 @@
 
 @media (max-width: 768px) {
   .pageWrapper { background: #000; overflow-y: clip; }
-  .psrRoot { padding: 30px 17px 0; overflow-x: visible; }
+  .psrRoot { padding: 0 17px 0; overflow-x: visible; }
   .section { padding: 32px 0; }
   .sectionGap { margin-top: 24px; }
   .sectionTitle {

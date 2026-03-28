@@ -1,4 +1,5 @@
 "use client";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { IMG_PSR_LOGO, IMG_PSR_LOGO_ENG } from "../data";
 import { t, type Lang } from "../translations";
@@ -13,12 +14,38 @@ export default function Header({ lang, onLangChange }: HeaderProps) {
   const { menuItems } = t[lang];
   const languages: Lang[] = ["ru", "en"];
   const langLabel: Record<Lang, string> = { ru: "Русский", en: "English" };
+  const [activeSection, setActiveSection] = useState<string>("");
+
+  useEffect(() => {
+    const ids = menuItems.map((item) => item.sectionId);
+    const observers: IntersectionObserver[] = [];
+
+    ids.forEach((id) => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      const obs = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setActiveSection(id);
+          } else if (entry.boundingClientRect.top > 0) {
+            setActiveSection((prev) => prev === id ? "" : prev);
+          }
+        },
+        { rootMargin: "-15% 0px -80% 0px", threshold: 0 }
+      );
+      obs.observe(el);
+      observers.push(obs);
+    });
+
+    return () => observers.forEach((obs) => obs.disconnect());
+  }, [menuItems]);
 
   const scrollTo = (sectionId: string) => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
+    <div className={styles.headerBar}>
     <header className={styles.header}>
       <div className={styles.logo}>
         <a href="https://psr.group/" target="_blank" rel="noopener noreferrer">
@@ -29,7 +56,7 @@ export default function Header({ lang, onLangChange }: HeaderProps) {
         {menuItems.map(({ label, sectionId }) => (
           <button
             key={sectionId}
-            className={styles.navItem}
+            className={`${styles.navItem}${activeSection === sectionId ? " " + styles.navItemActive : ""}`}
             aria-label={`Перейти к разделу ${label}`}
             onClick={() => scrollTo(sectionId)}
           >
@@ -55,5 +82,6 @@ export default function Header({ lang, onLangChange }: HeaderProps) {
         </div>
       </div>
     </header>
+    </div>
   );
 }
