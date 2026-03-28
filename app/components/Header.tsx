@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { IMG_PSR_LOGO, IMG_PSR_LOGO_ENG } from "../data";
 import { t, type Lang } from "../translations";
+import styles from "./Header.module.css";
 
 interface HeaderProps {
   lang: Lang;
@@ -18,17 +19,17 @@ export default function Header({ lang, onLangChange }: HeaderProps) {
   };
 
   return (
-    <header className="header">
-      <div className="logo">
+    <header className={styles.header}>
+      <div className={styles.logo}>
         <a href="https://psr.group/" target="_blank" rel="noopener noreferrer">
           <Image src={lang === "en" ? IMG_PSR_LOGO_ENG : IMG_PSR_LOGO} alt="ПСР" width={88} height={30} priority />
         </a>
       </div>
-      <nav className="nav" aria-label="Основная навигация">
+      <nav className={styles.nav} aria-label="Основная навигация">
         {menuItems.map(({ label, sectionId }) => (
           <button
             key={sectionId}
-            className="nav-item"
+            className={styles.navItem}
             aria-label={`Перейти к разделу ${label}`}
             onClick={() => scrollTo(sectionId)}
           >
@@ -36,16 +37,16 @@ export default function Header({ lang, onLangChange }: HeaderProps) {
           </button>
         ))}
       </nav>
-      <div className="lang-wrapper">
-        <button className="lang-btn" aria-label="Выбрать язык">
+      <div className={styles.langWrapper}>
+        <button className={styles.langBtn} aria-label="Выбрать язык">
           {langLabel[lang]}
-          <span className="lang-arrow" aria-hidden="true" />
+          <span className={styles.langArrow} aria-hidden="true" />
         </button>
-        <div className="lang-dropdown">
+        <div className={styles.langDropdown}>
           {languages.map((l) => (
             <button
               key={l}
-              className={`lang-option${lang === l ? " active" : ""}`}
+              className={`${styles.langOption}${lang === l ? " " + styles.active : ""}`}
               onClick={() => onLangChange(l)}
             >
               {langLabel[l]}

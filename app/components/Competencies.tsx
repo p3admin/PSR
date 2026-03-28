@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { competencyImages, techLogos } from "../data";
 import { t, type Lang } from "../translations";
+import shared from "../styles/shared.module.css";
+import styles from "./Competencies.module.css";
 
 interface CompetenciesProps {
   lang: Lang;
@@ -13,39 +15,53 @@ export default function Competencies({ lang }: CompetenciesProps) {
 
   return (
     <>
-      <section id="competencies" className="section section-gap">
-        <h2 className="section-title animate-up" style={{ marginBottom: 36 }}>
+      <section id="competencies" className={`${shared.section} ${shared.sectionGap}`}>
+        <h2 className={`${shared.sectionTitle} animate-up`} style={{ marginBottom: 36 }}>
           {tr.competenciesTitle}
         </h2>
-        <div className="competency-cards-list" data-animate-group>
+        <div className={styles.competencyCardsList} data-animate-group>
           {cards.map((card, idx) => (
-            <div key={card.title} className="competency-card card-bg-1 animate-up">
-              <div className="competency-card-desktop">
-                <div className="competency-card-content">
-                  <h3 className="competency-title">{card.title}</h3>
-                  <p className="competency-desc">{card.desc}</p>
+            <div key={card.title} className={`${styles.competencyCard} ${styles.cardBg1} animate-up`}>
+              <div className={styles.competencyCardDesktop}>
+                <div className={styles.competencyCardContent}>
+                  <h3 className={styles.competencyTitle}>{card.title}</h3>
+                  <p className={styles.competencyDesc}>{card.desc}</p>
                 </div>
-                <div className="card-image-container">
-                  <Image src={competencyImages[idx].desktop} alt={card.title} fill sizes="(max-width: 1024px) 100vw, 50vw" style={{ objectFit: "cover" }} />
-                  <div className="card-image-gradient" />
+                <div className={styles.cardImageContainer}>
+                  <Image
+                    src={competencyImages[idx].desktop}
+                    alt={card.title}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    style={{ objectFit: "cover" }}
+                  />
+                  <div className={styles.cardImageGradient} />
                 </div>
-                <div className="competency-counter">
+                <div className={styles.competencyCounter}>
                   <span>{String(idx + 1).padStart(2, "0")}</span> — {totalLabel}
                 </div>
-                <div className="card-glow" />
+                <div className={styles.cardGlow} />
               </div>
-              <div className="competency-card-mobile">
-                <div className="competency-card-mobile-content">
-                  <h3 className="competency-mobile-title">{card.title}</h3>
-                  <p className="competency-mobile-desc">{card.desc}</p>
+              <div className={styles.competencyCardMobile}>
+                <div className={styles.competencyCardMobileContent}>
+                  <h3 className={styles.competencyMobileTitle}>{card.title}</h3>
+                  <p className={styles.competencyMobileDesc}>{card.desc}</p>
                 </div>
-                <div className="competency-mobile-counter">
-                  <span className="competency-mobile-counter-current">{String(idx + 1).padStart(2, "0")}</span>
-                  <span className="competency-mobile-counter-sep"> —</span>
-                  <span className="competency-mobile-counter-total">{totalLabel}</span>
+                <div className={styles.competencyMobileCounter}>
+                  <span className={styles.competencyMobileCounterCurrent}>{String(idx + 1).padStart(2, "0")}</span>
+                  <span className={styles.competencyMobileCounterSep}> —</span>
+                  <span className={styles.competencyMobileCounterTotal}>{totalLabel}</span>
                 </div>
-                <div className="competency-mobile-illustration">
-                  <Image src={competencyImages[idx].mobile} alt="" aria-hidden={true} width={357} height={274} sizes="357px" style={{ objectFit: "cover", width: "100%", height: "100%" }} />
+                <div className={styles.competencyMobileIllustration}>
+                  <Image
+                    src={competencyImages[idx].mobile}
+                    alt=""
+                    aria-hidden={true}
+                    width={357}
+                    height={274}
+                    sizes="357px"
+                    style={{ objectFit: "cover", width: "100%", height: "100%" }}
+                  />
                 </div>
               </div>
             </div>
@@ -53,22 +69,21 @@ export default function Competencies({ lang }: CompetenciesProps) {
         </div>
       </section>
 
-      {/* Tech Logo Strip */}
-      <div className="tech-strip">
-        <div className="tech-strip-fade-left" />
-        <div className="tech-strip-inner">
+      <div className={styles.techStrip}>
+        <div className={styles.techStripFadeLeft} />
+        <div className={styles.techStripInner}>
           {[...techLogos, ...techLogos, ...techLogos].map((logo, i) => (
             // eslint-disable-next-line @next/next/no-img-element
             <img
               key={`${logo.name}-${i}`}
-              className="tech-logo"
+              className={styles.techLogo}
               src={logo.src}
               alt={logo.name}
               style={{ width: logo.w, height: logo.h }}
             />
           ))}
         </div>
-        <div className="tech-strip-fade-right" />
+        <div className={styles.techStripFadeRight} />
       </div>
     </>
   );

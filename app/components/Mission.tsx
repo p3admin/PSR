@@ -1,5 +1,7 @@
 import Image from "next/image";
 import { t, type Lang } from "../translations";
+import shared from "../styles/shared.module.css";
+import styles from "./Mission.module.css";
 
 interface MissionProps {
   lang: Lang;
@@ -9,37 +11,37 @@ export default function Mission({ lang }: MissionProps) {
   const tr = t[lang];
 
   return (
-    <section id="mission" className="section section-gap mission-section">
+    <section id="mission" className={`${shared.section} ${shared.sectionGap} ${styles.missionSection}`}>
       <Image
         src="/missionhole.png"
         alt=""
         aria-hidden={true}
-        className="mission-hole-absolute"
+        className={styles.missionHoleAbsolute}
         width={800}
         height={800}
         sizes="(max-width: 768px) 0px, 50vw"
       />
-      <h2 className="section-title animate-up">{tr.missionTitle}</h2>
-      <div className="mission-content">
-        <div className="mission-text-wrapper">
-          <p className="mission-text animate-up">{tr.missionBody}</p>
+      <h2 className={`${shared.sectionTitle} ${styles.missionSectionTitle} animate-up`}>{tr.missionTitle}</h2>
+      <div className={styles.missionContent}>
+        <div className={styles.missionTextWrapper}>
+          <p className={`${styles.missionText} animate-up`}>{tr.missionBody}</p>
         </div>
-        <div className="mission-hole-mobile-wrap">
+        <div className={styles.missionHoleMobileWrap}>
           <Image
             src="/missionhole.png"
             alt=""
             aria-hidden={true}
-            className="mission-hole-mobile"
+            className={styles.missionHoleMobile}
             width={800}
             height={800}
             sizes="(max-width: 768px) 80vw, 0px"
           />
         </div>
-        <div className="mission-approach animate-up">
-          <p className="mission-approach-title">{tr.missionApproachTitle}</p>
-          <div className="mission-approach-items">
+        <div className={`${styles.missionApproach} animate-up`}>
+          <p className={styles.missionApproachTitle}>{tr.missionApproachTitle}</p>
+          <div className={styles.missionApproachItems}>
             {tr.missionApproachItems.map((item, i) => (
-              <p key={i} className="mission-approach-item">{item}</p>
+              <p key={i} className={styles.missionApproachItem}>{item}</p>
             ))}
           </div>
         </div>

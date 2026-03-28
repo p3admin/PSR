@@ -1,9 +1,8 @@
 "use client";
 import { useState, useEffect } from "react";
-import Image from "next/image";
-import "./styles/page.css";
-import type { TabKey } from "./data";
-import type { Lang } from "./translations";
+import { type TabKey } from "./data";
+import { type Lang } from "./translations";
+import shared from "./styles/shared.module.css";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Mission from "./components/Mission";
@@ -56,8 +55,8 @@ export default function PSRLanding() {
   };
 
   return (
-    <div className="psr-page-wrapper">
-      <div className="psr-root">
+    <div className={shared.pageWrapper}>
+      <div className={shared.psrRoot}>
         <Header lang={lang} onLangChange={handleLangChange} />
         <Hero lang={lang} onScrollToForm={scrollToForm} />
         <Mission lang={lang} />
@@ -66,15 +65,6 @@ export default function PSRLanding() {
         <Projects lang={lang} activeTab={activeTab} onTabChange={setActiveTab} />
         <Footer lang={lang} />
       </div>
-      <Image
-        src="/rectangle.png"
-        alt=""
-        aria-hidden={true}
-        className="footer-rect-bg"
-        width={1440}
-        height={400}
-        style={{ width: "100%", height: "auto" }}
-      />
     </div>
   );
 }

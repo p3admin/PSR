@@ -1,0 +1,141 @@
+.footer {
+  width: 1440px;
+  position: relative;
+  overflow: visible;
+  isolation: isolate;
+  padding: 52px 120px 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 70px;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  bottom: -125px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1567px;
+  height: 924px;
+  background: url('/Footer.png') no-repeat center bottom / 100% 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.footerRectBg {
+  position: absolute;
+  bottom: -125px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 180vw;
+  height: auto;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.footerContent {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.contactColumn {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contactCard {
+  background: rgba(224, 221, 254, 0.1);
+  backdrop-filter: blur(34.5px);
+  -webkit-backdrop-filter: blur(34.5px);
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.contactCardHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.contactCardIcon { width: 32px; height: 32px; }
+
+.contactCardTitle {
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.19px;
+  color: #e0ddfe;
+}
+
+.contactCardValue {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.14px;
+  color: #e0ddfe;
+  text-decoration: none;
+}
+
+a.contactCardValue:hover { color: #462E94; transition: color 0.2s; }
+
+.contactEmailList {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.footerBottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  height: 220px;
+  width: 100%;
+}
+
+.footerLogoSection {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+.footerLogo { height: 23px; width: auto; }
+
+.footerCopyright {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1.3;
+  color: #7e7d90;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    width: calc(100% + 34px);
+    box-sizing: border-box;
+    align-self: stretch;
+    margin-left: -17px;
+    margin-right: -17px;
+    padding: 40px 17px 0;
+    gap: 40px;
+  }
+  .footer::before { width: 980px; height: 578px; bottom: -100px; top: auto; }
+  .footerRectBg { bottom: 0; }
+  .footerContent { flex-direction: column; gap: 12px; }
+  .contactColumn { width: 100%; }
+  .footerBottom { height: 250px; overflow: hidden; position: static; }
+  .footerLogoSection { position: absolute; bottom: 161px; left: 50%; transform: translateX(-50%); gap: 20px; margin-top: 0; white-space: nowrap; }
+  .footerLogoSection a { position: relative; top: 60px; }
+  .footerCopyright { position: relative; top: 50px; }
+}

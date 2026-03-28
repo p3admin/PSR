@@ -1,14 +1,4 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'www.figma.com',
-        pathname: '/api/mcp/asset/**',
-      },
-    ],
-  },
-}
+const nextConfig = {};
 
-export default nextConfig
+export default nextConfig;

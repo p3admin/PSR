@@ -1,5 +1,7 @@
 import { useEffect, useRef } from "react";
 import { t, type Lang } from "../translations";
+import shared from "../styles/shared.module.css";
+import styles from "./Hero.module.css";
 
 interface HeroProps {
   lang: Lang;
@@ -31,10 +33,10 @@ export default function Hero({ lang, onScrollToForm }: HeroProps) {
   }, []);
 
   return (
-    <section className="hero">
+    <section className={styles.hero}>
       <video
         ref={videoRef}
-        className="hero-bg"
+        className={styles.heroBg}
         src="/video.mp4"
         autoPlay
         muted
@@ -43,16 +45,15 @@ export default function Hero({ lang, onScrollToForm }: HeroProps) {
         preload="none"
         aria-hidden="true"
       />
-      {/* Single gradient bottom (duplicate removed) */}
-      <div className="hero-gradient-bottom" />
-      <div className="hero-gradient-top" />
-      <div className="hero-gradient-right" />
-      <div className="hero-gradient-left" />
-      <div className="hero-content" data-animate-group>
-        <h1 className="hero-title animate-up">{tr.heroTitle}</h1>
-        <p className="hero-subtitle animate-up">{tr.heroSubtitle}</p>
-        <div className="hero-btn animate-up">
-          <button className="btn-primary" onClick={onScrollToForm}>
+      <div className={styles.heroGradientBottom} />
+      <div className={styles.heroGradientTop} />
+      <div className={styles.heroGradientRight} />
+      <div className={styles.heroGradientLeft} />
+      <div className={styles.heroContent} data-animate-group>
+        <h1 className={`${styles.heroTitle} animate-up`}>{tr.heroTitle}</h1>
+        <p className={`${styles.heroSubtitle} animate-up`}>{tr.heroSubtitle}</p>
+        <div className={`${styles.heroBtn} animate-up`}>
+          <button className={shared.btnPrimary} onClick={onScrollToForm}>
             {tr.heroCta}
           </button>
         </div>

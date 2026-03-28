@@ -8,8 +8,6 @@ export const IMG_FRAME_MC = "/frame2087327238.svg";
 export const IMG_GROUP_STUDIO = "/group.svg";
 export const IMG_VECTOR_JV = "/vector.svg";
 export const IMG_VECTOR_PHONE = "/vector11.svg";
-export const IMG_RECTANGLE_STRIP =
-  "https://www.figma.com/api/mcp/asset/b879437c-ba83-472c-9586-5ee39abdd587";
 
 // ── Tech logos ────────────────────────────────────────────────────────────────
 export const techLogos = [

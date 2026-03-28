@@ -57,7 +57,7 @@ export const t: Record<Lang, Translations> = {
       { label: "Компетенции", sectionId: "competencies" },
       { label: "Проекты", sectionId: "projects" },
     ],
-    heroTitle: <>Развиваем<br /><span style={{whiteSpace:"nowrap"}}>цифровые продукты</span></>,
+    heroTitle: <>Развиваем<br /><span className="no-wrap">цифровые продукты</span></>,
     heroSubtitle: (
       <>
         Мы упаковываем сложные смыслы в премиальный<br className="mobile-br" /> дизайн,
@@ -176,7 +176,7 @@ export const t: Record<Lang, Translations> = {
       { label: "Expertise", sectionId: "competencies" },
       { label: "Projects", sectionId: "projects" },
     ],
-    heroTitle: <>Creating<br /><span style={{whiteSpace:"nowrap"}}>digital products</span></>,
+    heroTitle: <>Creating<br /><span className="no-wrap">digital products</span></>,
     heroSubtitle: (
       <>
         We package complex concepts into premium designs, develop industry-specific

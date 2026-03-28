@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import { projects, type TabKey } from "../data";
 import { t, type Lang } from "../translations";
+import shared from "../styles/shared.module.css";
+import styles from "./Projects.module.css";
 
 interface ProjectsProps {
   lang: Lang;
@@ -15,7 +17,6 @@ export default function Projects({ lang, activeTab, onTabChange }: ProjectsProps
   const [projectIndex, setProjectIndex] = useState(0);
   const [imageIndex, setImageIndex] = useState(0);
 
-  // Reset indexes when tab or language changes
   useEffect(() => {
     setProjectIndex(0);
     setImageIndex(0);
@@ -39,16 +40,16 @@ export default function Projects({ lang, activeTab, onTabChange }: ProjectsProps
   };
 
   return (
-    <section id="projects" className="section section-gap projects-section">
+    <section id="projects" className={`${shared.section} ${shared.sectionGap} ${styles.projectsSection}`}>
       <div>
-        <h2 className="section-title animate-up">{tr.projectsTitle}</h2>
-        <p className="projects-subtitle animate-up">{tr.projectsSubtitle}</p>
+        <h2 className={`${shared.sectionTitle} animate-up`}>{tr.projectsTitle}</h2>
+        <p className={`${styles.projectsSubtitle} animate-up`}>{tr.projectsSubtitle}</p>
       </div>
-      <div className="project-tabs animate-up">
+      <div className={`${styles.projectTabs} animate-up`}>
         {tr.projectTabs.map(({ key, label }) => (
           <button
             key={key}
-            className={`project-tab${activeTab === key ? " active" : ""}`}
+            className={`${styles.projectTab}${activeTab === key ? " " + styles.active : ""}`}
             onClick={() => onTabChange(key)}
           >
             {label}
@@ -56,100 +57,56 @@ export default function Projects({ lang, activeTab, onTabChange }: ProjectsProps
         ))}
       </div>
       {currentProject && (
-        <div
-          key={`${activeTab}-${projectIndex}`}
-          className="projects-content animate-on-mount"
-        >
-          <div className="project-image" style={{ position: "relative" }}>
-            <Image
-              src={currentImages[imageIndex]}
-              alt={currentProject.name[lang]}
-              fill
-              sizes="(max-width: 768px) 100vw, 50vw"
-              style={{ objectFit: "cover" }}
-            />
-            {currentImages.length > 1 && (
-              <div className="project-nav-btns" style={{ position: "relative", zIndex: 1 }}>
-                <button
-                  className="project-nav-btn"
-                  onClick={handlePrev}
-                  aria-label={tr.prevImage}
-                >
-                  <svg
-                    width="14"
-                    height="22"
-                    viewBox="0 0 14 22"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    style={{ transform: "scaleX(-1)" }}
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M1.03311 1.08753L11.0331 10.5875L1.03311 20.0875"
-                      stroke="white"
-                      strokeWidth="3"
-                    />
-                  </svg>
-                </button>
-                <button
-                  className="project-nav-btn"
-                  onClick={handleNext}
-                  aria-label={tr.nextImage}
-                >
-                  <svg
-                    width="14"
-                    height="22"
-                    viewBox="0 0 14 22"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M1.03311 1.08753L11.0331 10.5875L1.03311 20.0875"
-                      stroke="white"
-                      strokeWidth="3"
-                    />
-                  </svg>
-                </button>
-              </div>
-            )}
-          </div>
-          <div className="project-info">
-            <div className="project-info-top">
-              <div>
-                <h3 className="project-name">
-                  {currentProject.url ? (
-                    <a href={currentProject.url} target="_blank" rel="noopener noreferrer" className="project-name-link">
-                      {currentProject.name[lang]}
-                    </a>
-                  ) : (
-                    currentProject.name[lang]
-                  )}
-                </h3>
-                <p className="project-category">{currentProject.category[lang]}</p>
-              </div>
-              <p className="project-description">
-                {currentProject.description[lang]}
-              </p>
+        <div key={`${activeTab}-${projectIndex}`} className="animate-on-mount">
+          <div className={styles.projectsContent}>
+            <div className={styles.projectImage}>
+              <Image
+                src={currentImages[imageIndex]}
+                alt={currentProject.name[lang]}
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                style={{ objectFit: "cover" }}
+              />
+              {currentImages.length > 1 && (
+                <div className={styles.projectNavBtns}>
+                  <button className={styles.projectNavBtn} onClick={handlePrev} aria-label={tr.prevImage}>
+                    <svg width="14" height="22" viewBox="0 0 14 22" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ transform: "scaleX(-1)" }} aria-hidden="true">
+                      <path d="M1.03311 1.08753L11.0331 10.5875L1.03311 20.0875" stroke="white" strokeWidth="3" />
+                    </svg>
+                  </button>
+                  <button className={styles.projectNavBtn} onClick={handleNext} aria-label={tr.nextImage}>
+                    <svg width="14" height="22" viewBox="0 0 14 22" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path d="M1.03311 1.08753L11.0331 10.5875L1.03311 20.0875" stroke="white" strokeWidth="3" />
+                    </svg>
+                  </button>
+                </div>
+              )}
             </div>
-            {filteredProjects.length > 1 && (
-              <button className="btn-outline" onClick={handleNextProject}>
-                {tr.nextProject}
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="8"
-                  height="13"
-                  viewBox="0 0 8 13"
-                  fill="none"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M0.344381 0.362547L6.66017 6.36255L0.344381 12.3625"
-                    stroke="white"
-                  />
-                </svg>
-              </button>
-            )}
+            <div className={styles.projectInfo}>
+              <div className={styles.projectInfoTop}>
+                <div>
+                  <h3 className={styles.projectName}>
+                    {currentProject.url ? (
+                      <a href={currentProject.url} target="_blank" rel="noopener noreferrer" className={styles.projectNameLink}>
+                        {currentProject.name[lang]}
+                      </a>
+                    ) : (
+                      currentProject.name[lang]
+                    )}
+                  </h3>
+                  <p className={styles.projectCategory}>{currentProject.category[lang]}</p>
+                </div>
+                <p className={styles.projectDescription}>{currentProject.description[lang]}</p>
+              </div>
+              {filteredProjects.length > 1 && (
+                <button className={shared.btnOutline} onClick={handleNextProject}>
+                  {tr.nextProject}
+                  <svg xmlns="http://www.w3.org/2000/svg" width="8" height="13" viewBox="0 0 8 13" fill="none" aria-hidden="true">
+                    <path d="M0.344381 0.362547L6.66017 6.36255L0.344381 12.3625" stroke="white" />
+                  </svg>
+                </button>
+              )}
+            </div>
           </div>
         </div>
       )}
