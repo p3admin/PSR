@@ -23,17 +23,6 @@
   pointer-events: none;
 }
 
-.footerRectBg {
-  position: absolute;
-  bottom: -125px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 180vw;
-  height: auto;
-  z-index: 0;
-  pointer-events: none;
-}
-
 .footerContent {
   display: flex;
   gap: 16px;
@@ -131,7 +120,6 @@ a.contactCardValue:hover { color: #462E94; transition: color 0.2s; }
     gap: 40px;
   }
   .footer::before { width: 980px; height: 578px; bottom: -100px; top: auto; }
-  .footerRectBg { bottom: 0; }
   .footerContent { flex-direction: column; gap: 12px; }
   .contactColumn { width: 100%; }
   .footerBottom { height: 250px; overflow: hidden; position: static; }

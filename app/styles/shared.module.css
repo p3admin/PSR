@@ -14,6 +14,18 @@
   padding: 20px 20px 0;
 }
 
+/* ─── Footer background image (outside psrRoot, inside pageWrapper) ──────── */
+.footerRectBg {
+  position: absolute;
+  bottom: -125px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 180vw;
+  height: auto;
+  z-index: 0;
+  pointer-events: none;
+}
+
 /* ─── Section primitives ─────────────────────────────────────────────────── */
 .section {
   width: 100%;

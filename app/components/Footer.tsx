@@ -15,15 +15,6 @@ export default function Footer({ lang }: FooterProps) {
 
   return (
     <footer className={styles.footer}>
-      <Image
-        src="/rectangle.png"
-        alt=""
-        aria-hidden={true}
-        className={styles.footerRectBg}
-        width={1440}
-        height={400}
-        style={{ width: "100%", height: "auto" }}
-      />
       <div className={styles.footerContent}>
         <ContactForm lang={lang} />
         <div className={`${styles.contactColumn} animate-up`}>
