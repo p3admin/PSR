@@ -183,8 +183,12 @@
   height: 1.5px;
   background: #e0ddfe;
   border-radius: 2px;
-  transition: transform 0.25s, opacity 0.25s;
+  transition: transform 0.25s, opacity 0.1s;
   transform-origin: center;
+}
+
+.headerBarOpen {
+  border-bottom-color: transparent;
 }
 
 .burgerLineTop  { transform: translateY(6.5px) rotate(45deg); }

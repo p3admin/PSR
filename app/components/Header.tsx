@@ -65,7 +65,7 @@ export default function Header({ lang, onLangChange }: HeaderProps) {
 
   return (
     <>
-      <div className={styles.headerBar}>
+      <div className={`${styles.headerBar}${menuOpen ? " " + styles.headerBarOpen : ""}`}>
         <header className={styles.header}>
           <div className={styles.logo}>
             <a href="https://psr.group/" target="_blank" rel="noopener noreferrer">
