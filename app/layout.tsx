@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "ПСР — Развиваем цифровые продукты",
   description:
     "Мы упаковываем сложные смыслы в премиальный дизайн, разрабатываем отраслевые операционные системы и выстраиваем каналы продаж для стартапов, крупного бизнеса и государства.",
+  openGraph: {
+    images: ["/competences2.png"],
+  },
 };
 
 export default function RootLayout({
