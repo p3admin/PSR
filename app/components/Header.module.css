@@ -196,7 +196,13 @@
 .burgerLineBot  { transform: translateY(-6.5px) rotate(-45deg); }
 
 /* ─── Mobile fullscreen menu ─────────────────────────────────────────────── */
+@keyframes menuIn {
+  from { opacity: 0; transform: translateY(-12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
 .mobileMenu {
+  animation: menuIn 0.25s ease forwards;
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.92);
@@ -236,6 +242,17 @@
   flex: 1;
   justify-content: center;
 }
+
+.mobileNav .mobileNavItem {
+  opacity: 0;
+  transform: translateY(16px);
+  animation: menuIn 0.3s ease forwards;
+}
+
+.mobileNav .mobileNavItem:nth-child(1) { animation-delay: 0.07s; }
+.mobileNav .mobileNavItem:nth-child(2) { animation-delay: 0.13s; }
+.mobileNav .mobileNavItem:nth-child(3) { animation-delay: 0.19s; }
+.mobileNav .mobileNavItem:nth-child(4) { animation-delay: 0.25s; }
 
 .mobileNavItem {
   background: none;
@@ -284,5 +301,6 @@
   .header { padding: 10px 0; }
   .nav { display: none; }
   .langWrapper { display: none; }
-  .burger { display: flex; }
+  .burger { display: flex; margin-right: -10px; }
+  .logo { margin-left: 10px; }
 }
