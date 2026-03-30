@@ -301,6 +301,6 @@
   .header { padding: 10px 0; }
   .nav { display: none; }
   .langWrapper { display: none; }
-  .burger { display: flex; margin-right: -10px; }
+  .burger { display: flex; margin-right: 10px; }
   .logo { margin-left: 10px; }
 }
