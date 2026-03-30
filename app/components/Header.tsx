@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 import Image from "next/image";
 import { IMG_PSR_LOGO, IMG_PSR_LOGO_ENG } from "../data";
 import { t, type Lang } from "../translations";
@@ -19,7 +20,13 @@ export default function Header({ lang, onLangChange }: HeaderProps) {
 
   const handleScrollTo = (sectionId: string) => {
     setMenuOpen(false);
-    setTimeout(() => document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" }), 10);
+    setTimeout(() => {
+      const el = document.getElementById(sectionId);
+      if (!el) return;
+      const headerHeight = document.querySelector(`.${styles.headerBar}`)?.getBoundingClientRect().height ?? 72;
+      const top = el.getBoundingClientRect().top + window.scrollY - headerHeight - 16;
+      window.scrollTo({ top, behavior: "smooth" });
+    }, 10);
   };
 
   useEffect(() => {
@@ -42,6 +49,16 @@ export default function Header({ lang, onLangChange }: HeaderProps) {
       obs.observe(el);
       observers.push(obs);
     });
+
+    const footer = document.querySelector("footer");
+    if (footer) {
+      const footerObs = new IntersectionObserver(
+        ([entry]) => { if (entry.isIntersecting) setActiveSection(""); },
+        { threshold: 0.15 }
+      );
+      footerObs.observe(footer);
+      observers.push(footerObs);
+    }
 
     return () => observers.forEach((obs) => obs.disconnect());
   }, [menuItems]);
@@ -103,8 +120,8 @@ export default function Header({ lang, onLangChange }: HeaderProps) {
         </header>
       </div>
 
-      {/* Mobile fullscreen menu — outside headerBar to escape backdrop-filter containing block */}
-      {menuOpen && (
+      {/* Mobile fullscreen menu — portalled to body to escape any containing block */}
+      {menuOpen && createPortal(
         <div className={styles.mobileMenu}>
           <button
             className={styles.mobileClose}
@@ -136,7 +153,8 @@ export default function Header({ lang, onLangChange }: HeaderProps) {
               </button>
             ))}
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </>
   );
